@@ -5,7 +5,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv C7917B12
 RUN echo 'deb http://ppa.launchpad.net/chris-lea/node.js/ubuntu trusty main' | tee /etc/apt/sources.list.d/nodejs.list
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install nodejs npm git
+RUN apt-get install -y -q python build-essential nodejs git
 
 # Install application dependencies.
 RUN npm install coffee-script -g
